@@ -1,0 +1,32 @@
+{
+  "name": "dense-redux-actions",
+  "version": "0.1.0",
+  "description": "A simpler way to handle action types and actions creators for Redux.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Redux",
+    "Saga",
+    "ReactNative",
+    "Actions",
+    "ActionCreator"
+  ],
+  "files": [
+    "lib/**/*"
+  ],
+  "author": "Andreas Mønster <vejbaek@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.2"
+  }
+}
