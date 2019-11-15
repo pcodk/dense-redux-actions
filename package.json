@@ -1,6 +1,6 @@
 {
   "name": "dense-redux-actions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simpler way to handle action types and actions creators for Redux.",
   "main": "index.js",
   "scripts": {
