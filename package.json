@@ -1,6 +1,6 @@
 {
   "name": "dense-redux-actions",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simpler way to handle action types and actions creators for Redux.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
