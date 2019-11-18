@@ -1,4 +1,5 @@
 lib
+examples
 tsconfig.json
 tslint.ts
 .prettierrc
