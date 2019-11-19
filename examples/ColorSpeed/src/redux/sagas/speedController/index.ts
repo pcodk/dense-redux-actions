@@ -1,6 +1,6 @@
 import { put, select } from 'redux-saga/effects';
 import { takeFirst } from '../../../utils';
-import { msToUnitFactor } from '../../../utils/variables';
+import { msToUnit } from '../../../utils/variables';
 
 import {
   SC_TOGGLE_MONITORING_REQUEST,
@@ -18,9 +18,10 @@ function* processRequests(action: GenericAction) {
       const currentUnit: SpeedUnit = yield select((store: AppState) => store.speedController.speedUnit);
       
       // get speed in correct units
-      const speed = (payload.coords.speed || 0)*msToUnitFactor[currentUnit];
+      const speed = (payload.coords.speed || 0) <= 0 ? 0 : payload.coords.speed;
+      const transformedSpeed = speed! * msToUnit[currentUnit];
     
-      yield put(SC_UPDATE_CURRENT_SPEED.create(speed));
+      yield put(SC_UPDATE_CURRENT_SPEED.create(transformedSpeed));
       break;
     }
 

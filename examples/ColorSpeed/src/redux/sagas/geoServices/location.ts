@@ -12,23 +12,22 @@ import {
   GEO_LOCATION_PERMISSIONS_FAILURE,
 } from '../../actions';
 
-function* hasLocationPermission () {
-  if (Platform.OS === 'ios' ||
-      (Platform.OS === 'android' && Platform.Version < 23)) {
+function* hasLocationPermission() {
+  if (Platform.OS === 'ios' || (Platform.OS === 'android' && Platform.Version < 23)) {
     return true;
   }
 
-  const hasPermission = yield PermissionsAndroid.check(
-    PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-  );
+  const hasPermission = yield PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
 
-  if (hasPermission) return true;
+  if (hasPermission) {
+    return true;
+  }
 
-  const status = yield PermissionsAndroid.request(
-    PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-  );
+  const status = yield PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
 
-  if (status === PermissionsAndroid.RESULTS.GRANTED) return true;
+  if (status === PermissionsAndroid.RESULTS.GRANTED) {
+    return true;
+  }
 
   if (status === PermissionsAndroid.RESULTS.DENIED) {
     ToastAndroid.show('Location permission denied by user.', ToastAndroid.LONG);
@@ -39,9 +38,8 @@ function* hasLocationPermission () {
   return false;
 }
 
-
 export function* getCurrentPosition() {
-  if(!(yield hasLocationPermission())) {
+  if (!(yield hasLocationPermission())) {
     return GEO_LOCATION_PERMISSIONS_FAILURE.create('Permissions denied');
   }
 
@@ -67,7 +65,7 @@ export function* getCurrentPosition() {
 let locationSaga: any;
 
 function* watchLocation() {
-  if(!(yield hasLocationPermission())) {
+  if (!(yield hasLocationPermission())) {
     return GEO_LOCATION_PERMISSIONS_FAILURE.create('Permissions denied');
   }
 

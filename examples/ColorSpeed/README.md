@@ -1,6 +1,6 @@
 ## Example project for dense-action-creators 
 
-Small demo project intended to show how to use TypeScript to enhance handling of actions type/action creators.
+Small demo project intended to show how to use TypeScript to enhance handling of actions type/action creators in this case using [dense-redux-actions](https://www.npmjs.com/package/dense-redux-actions)
 
 ### Short description
 
@@ -14,20 +14,18 @@ Clone the repository and start exploring. To see it in action try;
 * at a new feature to the speedometer - pull requests are welcome/
 
 ### How to run 
-Start a virtual Android device and do the usuals installation dance:
+Start a virtual Android device and do the usual installation dance:
 
     git clone git@github.com:pcodk/dense-redux-actions.git
     
     cd ./dense-redux-actions/examples/ColorSpeed
     yarn
     npx react-native run-android
+
     
 ### More info
 
-Take a look at the companion blog post describing better redux actions/action creators with TypeScript 
-in this case using "[dense-redux-actions](https://www.npmjs.com/package/dense-redux-actions)" as a simple solution. 
-
-[Link to blog post](https://peytz.dk)
+Take a look at the companion [blog post]() describing a simple solution for better redux actions/action creators with TypeScript. 
 
 ### License 
 "This project is licensed under the terms of the MIT license." See LICENCE.

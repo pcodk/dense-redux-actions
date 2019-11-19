@@ -21,7 +21,7 @@ export const speedLimits = {
   'miles/h': ['35', '45', '65', '75'],
 };
 
-export const msToUnitFactor = {
+export const msToUnit = {
   ["km/h"]: 3.6,
   ["miles/h"]: 2.24,
 };
