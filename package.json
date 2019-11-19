@@ -5,13 +5,13 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "lint": "tslint -p tsconfig.json",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pcodk/dense-redux-actions"
+    "url": "https://github.com/pcodk/dense-redux-actions.git"
   },
   "keywords": [
     "Redux",

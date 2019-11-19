@@ -139,3 +139,14 @@ Unpack both payload and meta data:
     Ex:
 
     const { payload, meta } = ACTION.unpack(action);
+
+## Alternatives
+
+If you are look for a framework for handling redux actions instead you may want to checkout:
+
+* [typesafe-actions](https://www.npmjs.com/package/typesafe-actions)
+
+or 
+
+* [redux-toolbelt](https://www.npmjs.com/package/redux-toolbelt)
+
