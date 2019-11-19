@@ -4,7 +4,7 @@ Small "class based actions creators" to get type safe actions with TypeScript, t
 
 ## This is a test release please don't use (yet :-).
 
-This version not release ready, expect it to be ready before 20 november 2019.
+This version is not release ready, expect it to be ready before 20 november 2019.
 
 **Use with care**
 
@@ -17,67 +17,70 @@ This version not release ready, expect it to be ready before 20 november 2019.
    npm install dense-redux-actions -- save
 
 ## How to use
+
 ### A simple example 
 
-A vanilla action creator:
+Create a vanilla action creator:
     
     // actions.ts
     import { ActionCreator } from 'dense-redux-actions';
 
     export const myActionCreator = new ActionCreator<string>('MY_ACTION_TYPE'); 
 
-Dispatch an action
+Dispatch an action:
 
-    import { myActionCreator } from '/actions';
+    import { myActionCreator } from './actions';
 
-    ...
-    key: (str: sting) => dispatch(myActionCreator.create(str)), 
+    const mapDispatchToProps = (dispatch) => {
+      return {
+        on: (str: string) => dispatch(myActionCreator.create(str)),
+      };
+    }
     
     or from a saga
 
-    yield put(myActionCreator.create('some string'));    
+    yield put(myActionCreator.create('some string payload'));    
 
-Consume an action 
+Consume an action:
 
-    switch(action.type) {
+    switch (action.type) {
       case myActionCreator.type: {
         const payload = myActionCreator.payload(action);
-      return {
-        myPayload: payload
+        // do something with payload
       }
-      ...
     }
 
 ### Example for use with unified naming
-Using the action type as name for the action creator makes navigating the code base 
-easier since you don't have to remember what the creators name i for a given type. 
 
-    //actions.ts
+Using the action type as name for the action creator makes navigating the code base 
+easier since you don't have to remember what the creator's name is for a given type. 
+
+    // actions.ts
     import { ActionCreator } from 'dense-redux-actions';
     
     interface ResourceType {
-        type: string;
-        id: string;
+      type: string;
+      id: string;
     }
 
     interface LocationType {
-        region: string;
+      region: string;
     }
-
 
     export const API_SOME_RESOURCE_REQUEST 
       = new ActionCreator<ResourceType, LocationType>('API_SOME_RESOURCE_REQUEST'); 
 
 
-Dispatch the an action
+Dispatch an action:
 
-    ...
-    fetch: (resource, region) => 
-      dispatch(API_SOME_RESOURCE_REQUEST.create(resource, region))
+    const mapDispatchToProps = (dispatch) => {
+      return {
+        fetch: (resource, region) => 
+          dispatch(API_SOME_RESOURCE_REQUEST.create(resource, region))
+      }
+    }
 
-    ect.
-
-Consume the action with something like
+Consume the action:
 
     import { GenericAction } from 'dense-redux-actions'; 
     import { API_SOME_RESOURCE_REQUEST } from './actions';
@@ -86,45 +89,53 @@ Consume the action with something like
       switch (action.type) {
         case API_SOME_RESOURCE_REQUEST.type: {
           const { payload, meta } = API_SOME_RESOURCE_REQUEST.unpack(action);
-    ...
+          ...
+        }
+      }
     }
 
-## API 
-New action creator
+## API
+
+Create a new action creator:
 
     new ActionCreator<PayloadType, MetaType?>(actionType: string)
 
-    ex.
+    Ex:
+
     const ACTION = new ActionCreator<string, string>('ACTION');
 
     or 
 
     const ACTION = new ActionCreator<null>('ACTION');
 
-Create a new action 
+Create a new action:
 
     create(payload: PayloadType, meta?: MetaType): ActionType
     
-    ex.
+    Ex:
+
     ACTION.create('test', 'me') // => {type: 'ACTION', _payload: 'test', _meta: 'me'}
 
-Get typed payload from generic action
+Get typed payload from generic action:
 
     payload(action: GenericAction): PayloadType
 
-    ex.
+    Ex:
+
     const payload = ACTION.payload(action); // ex. payload: string = 'test'
 
-Get types mata data 
+Get type meta data:
 
-    mata(action: GenericAction): MetaType
+    meta(action: GenericAction): MetaType
 
-    ex.
+    Ex:
+
     const meta = ACTION.meta(action); // ex. meta: string = 'me'
 
-Unpack both payload and meta data
+Unpack both payload and meta data:
 
     unpack(action: GenericAction): { payload: PayloadType, meta: MetaType }
 
-    ex.
+    Ex:
+
     const { payload, meta } = ACTION.unpack(action);
