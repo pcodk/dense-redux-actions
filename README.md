@@ -1,12 +1,7 @@
 # dense-redux-actions
 
-Small "class based actions creators" to get type safe actions with TypeScript, to benefit from intellisense and to enable unified naming for ease of code navigation.   
-
-## This is a test release please don't use (yet :-).
-
-This version is not release ready, expect it to be ready before 20 november 2019.
-
-**Use with care**
+Small "class based actions creators" to get type safe actions with TypeScript, to benefit from intellisense and to enable unified naming for ease of code navigation. See this 
+[blog post](https://medium.com/@avm_50163/better-redux-actions-using-typescript-84f81e872d56) for a discussion of why you might use this module.    
 
 ## How to install
 
