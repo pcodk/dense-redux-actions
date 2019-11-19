@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, Picker, Text, Button } from 'react-native';
+import { StyleSheet, View, Picker, Text } from 'react-native';
 
 interface Props {
   values: string[];
-  onSelect: (value: SpeedUnit) => void;
+  onSelect: (value: string) => void;
   selected: string;
   label: string;
   style?: any;
@@ -15,17 +15,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  counter: {
-    fontSize: 60,
-    textAlign: 'center',
-    height: 80,
-  },
-  button: {
-    fontSize: 20,
-    position: 'relative',
-    top: -32,
-    right: -50,
   },
 });
 
@@ -41,8 +30,8 @@ class Selector extends React.PureComponent<Props> {
         <Text>{this.props.label}</Text>
         <Picker
           selectedValue={this.props.selected}
-          style={[this.props.style, { height: 50}]}
-          onValueChange={(itemValue, itemIndex) => this.props.onSelect(itemValue)}>
+          style={[this.props.style]}
+          onValueChange={(itemValue) => this.props.onSelect(itemValue)}>
           {this.props.values.map(this.pickerItem)}
         </Picker>
       </View>

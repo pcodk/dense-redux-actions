@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Button, Text } from 'react-native';
+import { View, Button, Text, SafeAreaView } from 'react-native';
 import { GeolocationResponse } from '@react-native-community/geolocation';
 import DigitalCounter from './DigitalCounter';
 import Selector from './Selector';
@@ -80,34 +80,34 @@ class SpeedMonitor extends React.PureComponent<Props> {
 
   public render() {
     return (
-      <View style={{ flex: 1, marginHorizontal: 20 }}>
-        <View style={{ flexDirection: 'row' }}>
-          <Selector
-            style={{ width: 100 }}
-            label={strings('speedMonitor.selectLimit')}
-            selected={this.props.speedLimit}
-            values={this.props.speedLimits}
-            onSelect={this.props.selectSpeedLimit}
+      <SafeAreaView style={{ flex: 1, marginHorizontal: 20 }}>
+          <View style={{ flexDirection: 'row', height: '20%' }}>
+            <Selector
+              style={{ width: 100 }}
+              label={strings('speedMonitor.selectLimit')}
+              selected={this.props.speedLimit}
+              values={this.props.speedLimits}
+              onSelect={this.props.selectSpeedLimit}
+            />
+            <Selector
+              style={{ width: 120 }}
+              label={strings('speedMonitor.selectUnit')}
+              selected={this.props.unit}
+              values={speedUnits}
+              onSelect={this.props.selectUnit}
+            />
+          </View>
+          <DigitalCounter
+            color={this.selectColor()}
+            buttonText={this.props.isMonitoringSpeed ? strings('speedMonitor.stop') : strings('speedMonitor.start')}
+            count={this.props.currentSpeed}
+            onPress={this.props.toggleSpeedMonitor}
           />
-          <Selector
-            style={{ width: 120 }}
-            label={strings('speedMonitor.selectUnit')}
-            selected={this.props.unit}
-            values={speedUnits}
-            onSelect={this.props.selectUnit}
-          />
-        </View>
-        <DigitalCounter
-          color={this.selectColor()}
-          buttonText={this.props.isMonitoringSpeed ? strings('speedMonitor.stop') : strings('speedMonitor.start')}
-          count={this.props.currentSpeed}
-          onPress={this.props.toggleSpeedMonitor}
-        />
-        <View style={{ flex: 1, alignItems: 'center' }}>
-          <Button onPress={this.props.whereAmI} title={ strings('speedMonitor.getLocationButton')} />
-          {this.showLocation(this.props.currentLocation)}
-        </View>
-      </View>
+          <View style={{ flex: 1, alignItems: 'center' }}>
+            <Button onPress={this.props.whereAmI} title={ strings('speedMonitor.getLocationButton')} />
+            {this.showLocation(this.props.currentLocation)}
+          </View>
+      </SafeAreaView>
     );
   }
 }
