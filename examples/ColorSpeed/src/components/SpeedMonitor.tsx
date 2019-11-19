@@ -94,7 +94,7 @@ class SpeedMonitor extends React.PureComponent<Props> {
               label={strings('speedMonitor.selectUnit')}
               selected={this.props.unit}
               values={speedUnits}
-              onSelect={this.props.selectUnit}
+              onSelect={(unit: string) => this.props.selectUnit(unit as SpeedUnit)}
             />
           </View>
           <DigitalCounter
