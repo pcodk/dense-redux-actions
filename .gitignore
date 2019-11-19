@@ -69,3 +69,4 @@ fastlane/report.xml
 /ios/Pods
 
 dist/
+coverage/
