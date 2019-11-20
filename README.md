@@ -5,11 +5,11 @@ Small "class based actions creators" to get type safe actions with TypeScript, t
 
 ## How to install
 
-   yarn add dense-redux-actions
+    yarn add dense-redux-actions
 
-   or 
+    or 
 
-   npm install dense-redux-actions -- save
+    npm install dense-redux-actions -- save
 
 ## How to use
 
@@ -135,6 +135,19 @@ Unpack both payload and meta data:
 
     const { payload, meta } = ACTION.unpack(action);
 
+Destructuring - if you want to use shorthand for connect ect. 
+
+    destruct(): { [actionType: string]: (payload: payloadType, meta?: MetaType) }
+
+    Ex:
+    
+    // makes the prop 
+    // "ACTION_TYPE: (payload: payloadType, meta?: MetaType) => action" available.
+    
+    const mapDispatchToProps = {
+     ...ACTION.destruct(),  
+    }
+   
 ## Alternatives
 
 If you are look for a framework for handling redux actions instead you may want to checkout:

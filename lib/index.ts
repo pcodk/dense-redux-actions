@@ -69,6 +69,18 @@ export class ActionCreator<PayloadType, MetaType = undefined> {
     return action._meta;
   }
 
+  public destruct(): {[actionType: string]: (_payload: PayloadType, _meta?: MetaType) => object} {
+    return {
+      [this.type]: (_payload: PayloadType, _meta?: MetaType) => {
+        return {
+          type: this.type,
+          _payload,
+          _meta,
+        };
+      }
+    };
+  }
+
   public create(_payload: PayloadType, _meta?: MetaType) {
     return {
       type: this.type,

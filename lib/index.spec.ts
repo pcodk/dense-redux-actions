@@ -10,7 +10,7 @@ describe('Test action creator instantiation', () => {
   let action: GenericAction;
 
   beforeEach(() => {
-    TEST_ACTION = new ActionCreator<TestType, string>('TEST_ACTION');
+    TEST_ACTION = new ActionCreator<TestType, string | undefined>('TEST_ACTION');
     action = TEST_ACTION.create(
       { testField1: 'Hello', testField2: 29 },
       'test',
