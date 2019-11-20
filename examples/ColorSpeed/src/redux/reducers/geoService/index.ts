@@ -1,10 +1,10 @@
+import { GeoPosition, GeoError } from 'react-native-geolocation-service';
 import {
   GEO_LOCATION_SUCCESS,
   GEO_LOCATION_REQUEST,
   GEO_LOCATION_FAILURE,
   GEO_LOCATION_UPDATE_SUCCESS,
 } from '../../actions';
-import { GeoPosition, GeoError } from 'react-native-geolocation-service';
 
 export interface GeoServiceState {
   currentLocation?: GeoPosition;

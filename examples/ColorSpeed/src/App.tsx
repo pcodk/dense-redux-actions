@@ -20,7 +20,8 @@ const middleware = __DEV__
       // wrap action creator for use in React Native Debugger dispatcher.
       actionCreators: {
         [INITIALIZE.type]: payload => INITIALIZE.create(payload),
-        [SC_TOGGLE_MONITORING_REQUEST.type]: payload => SC_TOGGLE_MONITORING_REQUEST.create(payload),
+        // or
+        ...SC_TOGGLE_MONITORING_REQUEST.destruct(),
       },
     })(applyMiddleware(...middlewares))
   : applyMiddleware(...middlewares);

@@ -9,7 +9,7 @@
     "lint": "tslint -p ."
   },
   "dependencies": {
-    "dense-redux-actions": "^0.2.0",
+    "dense-redux-actions": "^0.3.0",
     "i18n-js": "^3.3.0",
     "react": "16.9.0",
     "react-native": "0.61.3",
