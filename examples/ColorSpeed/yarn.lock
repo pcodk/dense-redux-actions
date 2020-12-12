@@ -1817,10 +1817,10 @@ denodeify@^1.2.1:
   resolved "https://registry.yarnpkg.com/denodeify/-/denodeify-1.2.1.tgz#3a36287f5034e699e7577901052c2e6c94251631"
   integrity sha1-OjYof1A05pnnV3kBBSwubJQlFjE=
 
-dense-redux-actions@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/dense-redux-actions/-/dense-redux-actions-0.2.0.tgz#086c78db8877bd3d347a57cc96db0bbfc5c660fe"
-  integrity sha512-AHAhbq+6IvNSPo7BfowBmpJx9ALjJ1SitEPHwl1X7B8LbcrDc+1IkzRSfTgyF4JQQTGTdUNClStu0ejSGzJN4w==
+dense-redux-actions@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/dense-redux-actions/-/dense-redux-actions-0.3.0.tgz#45fb492cb92ebad8c975881e6f3f91fc0ea19100"
+  integrity sha512-ohR6o6KIaog3BeIF0NjEBZ7EfXz1f0eA7FupuSdQ668n0GLTfKeegQsYAOEulTU/etmDE7RcT6T3Qfbr8jX15g==
 
 depd@~1.1.2:
   version "1.1.2"
@@ -2546,9 +2546,9 @@ inherits@2, inherits@2.0.4, inherits@^2.0.3, inherits@~2.0.3:
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
 ini@~1.3.0:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
-  integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
+  integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
 inquirer@^3.0.6:
   version "3.3.0"
