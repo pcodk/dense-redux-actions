@@ -1817,10 +1817,10 @@ denodeify@^1.2.1:
   resolved "https://registry.yarnpkg.com/denodeify/-/denodeify-1.2.1.tgz#3a36287f5034e699e7577901052c2e6c94251631"
   integrity sha1-OjYof1A05pnnV3kBBSwubJQlFjE=
 
-dense-redux-actions@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/dense-redux-actions/-/dense-redux-actions-0.2.0.tgz#086c78db8877bd3d347a57cc96db0bbfc5c660fe"
-  integrity sha512-AHAhbq+6IvNSPo7BfowBmpJx9ALjJ1SitEPHwl1X7B8LbcrDc+1IkzRSfTgyF4JQQTGTdUNClStu0ejSGzJN4w==
+dense-redux-actions@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/dense-redux-actions/-/dense-redux-actions-0.3.0.tgz#45fb492cb92ebad8c975881e6f3f91fc0ea19100"
+  integrity sha512-ohR6o6KIaog3BeIF0NjEBZ7EfXz1f0eA7FupuSdQ668n0GLTfKeegQsYAOEulTU/etmDE7RcT6T3Qfbr8jX15g==
 
 depd@~1.1.2:
   version "1.1.2"
@@ -4964,9 +4964,9 @@ typescript@^3.6.3:
   integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
 
 ua-parser-js@^0.7.18:
-  version "0.7.20"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.20.tgz#7527178b82f6a62a0f243d1f94fd30e3e3c21098"
-  integrity sha512-8OaIKfzL5cpx8eCMAhhvTlft8GYF8b2eQr6JkCyVdrgjcytyOmPCXrqXFcUnhonRpLlh5yxEZVohm6mzaowUOw==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-es@^3.1.9:
   version "3.3.9"
