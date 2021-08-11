@@ -1817,10 +1817,10 @@ denodeify@^1.2.1:
   resolved "https://registry.yarnpkg.com/denodeify/-/denodeify-1.2.1.tgz#3a36287f5034e699e7577901052c2e6c94251631"
   integrity sha1-OjYof1A05pnnV3kBBSwubJQlFjE=
 
-dense-redux-actions@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/dense-redux-actions/-/dense-redux-actions-0.2.0.tgz#086c78db8877bd3d347a57cc96db0bbfc5c660fe"
-  integrity sha512-AHAhbq+6IvNSPo7BfowBmpJx9ALjJ1SitEPHwl1X7B8LbcrDc+1IkzRSfTgyF4JQQTGTdUNClStu0ejSGzJN4w==
+dense-redux-actions@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/dense-redux-actions/-/dense-redux-actions-0.3.0.tgz#45fb492cb92ebad8c975881e6f3f91fc0ea19100"
+  integrity sha512-ohR6o6KIaog3BeIF0NjEBZ7EfXz1f0eA7FupuSdQ668n0GLTfKeegQsYAOEulTU/etmDE7RcT6T3Qfbr8jX15g==
 
 depd@~1.1.2:
   version "1.1.2"
@@ -3915,9 +3915,9 @@ path-key@^2.0.0, path-key@^2.0.1:
   integrity sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
 
 path-parse@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
-  integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
+  integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
 
 path-type@^2.0.0:
   version "2.0.0"
