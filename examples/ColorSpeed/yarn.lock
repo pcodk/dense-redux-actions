@@ -1817,10 +1817,10 @@ denodeify@^1.2.1:
   resolved "https://registry.yarnpkg.com/denodeify/-/denodeify-1.2.1.tgz#3a36287f5034e699e7577901052c2e6c94251631"
   integrity sha1-OjYof1A05pnnV3kBBSwubJQlFjE=
 
-dense-redux-actions@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/dense-redux-actions/-/dense-redux-actions-0.2.0.tgz#086c78db8877bd3d347a57cc96db0bbfc5c660fe"
-  integrity sha512-AHAhbq+6IvNSPo7BfowBmpJx9ALjJ1SitEPHwl1X7B8LbcrDc+1IkzRSfTgyF4JQQTGTdUNClStu0ejSGzJN4w==
+dense-redux-actions@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/dense-redux-actions/-/dense-redux-actions-0.3.0.tgz#45fb492cb92ebad8c975881e6f3f91fc0ea19100"
+  integrity sha512-ohR6o6KIaog3BeIF0NjEBZ7EfXz1f0eA7FupuSdQ668n0GLTfKeegQsYAOEulTU/etmDE7RcT6T3Qfbr8jX15g==
 
 depd@~1.1.2:
   version "1.1.2"
@@ -4847,9 +4847,9 @@ tmp@^0.0.33:
     os-tmpdir "~1.0.2"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
